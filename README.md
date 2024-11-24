@@ -135,16 +135,16 @@ https://kind.sigs.k8s.io/docs/user/quick-start#installation
   * We need to edit the Free 5GC master helm chart values to use only eth0 as network interface and to add the specific @IP details for the N6 network
     ```
       n6network:
-			    enabled: true
-			    name: n6network
-			    type: ipvlan
-			    masterIf: eth0
-			    subnetIP: 172.18.0.0
-			    cidr: 16
-			    gatewayIP: 172.18.0.0
-			    excludeIP: 172.18.0.0
+        enabled: true
+        name: n6network
+        type: ipvlan
+        masterIf: eth0
+        subnetIP: 172.18.0.0
+        cidr: 16
+	gatewayIP: 172.18.0.0
+	excludeIP: 172.18.0.0
     ```
-  * We also need to set up an IP@ compatible with the class to the UPF N6 interface. We need to edit the free5gc-upf helm chart value (./free5gc/charts/free5gc-upf/values.yaml line 22) for the corresponding value:
+  * We also need to set up an IP@ compatible with the class to the UPF N6 interface. We need to edit the free5gc-upf helm chart value (./free5gc/charts/free5gc-upf/values.yaml line 79 ) for the corresponding value:
     ```
      n6if:  # DN
 				    ipAddress: 172.18.0.22
