@@ -40,8 +40,9 @@ As documented in the Free5GC documentation:
 * GTP5G kernel module to be installed on the host, run as root user
 
 ```
-apt install -y make gcc
-git clone https://github.com/free5gc/gtp5g.git && cd gtp5g
+apt install -y make gcc unzip
+curl -LO https://github.com/free5gc/gtp5g/archive/refs/tags/v0.8.10.zip
+unzip v0.8.10 && cd gtp5g-0.8.10
 apt install gcc
 make clean & make
 sudo make install
