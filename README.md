@@ -246,10 +246,10 @@ Following Free5GC documentation:
 			kind-control-plane   Ready    control-plane   34m   v1.27.3   172.18.0.2    <none>        Debian GNU/Linux 11 (bullseye)   6.2.0-33-generic   containerd://1.7.1
 			kind-worker          Ready    <none>          33m   v1.27.3   172.18.0.3    <none>        Debian GNU/Linux 11 (bullseye)   6.2.0-33-generic   containerd://1.7.1
       ```
-    * Connect to the webUI from the host without proxy:
-      http://172.18.0.3:30500
-      § Login admin/free5gc
-      § Can add default subscriber via the ui
+    * Configure a socks proxy with foxy proxy and a dynamicForward to the vm
+    * Connect to the webUI: http://172.18.0.2:30500
+    * Login admin/free5gc
+    * Can add default subscriber via the ui
 * Use of UERANSIM
   ```
   cub@labFormation:~/towards5gs-helm/charts$ sudo helm -n free5gc install ueransim-premier ./ueransim/
