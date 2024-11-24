@@ -133,6 +133,7 @@ https://kind.sigs.k8s.io/docs/user/quick-start#installation
     ```
     We got 172.18.0.0/16, assuming the GW is 172.18.0.0
   * We need to edit the Free 5GC master helm chart values to use only eth0 as network interface and to add the specific @IP details for the N6 network
+
     ```
       n6network:
         enabled: true
@@ -144,10 +145,11 @@ https://kind.sigs.k8s.io/docs/user/quick-start#installation
 	gatewayIP: 172.18.0.0
 	excludeIP: 172.18.0.0
     ```
+    
   * We also need to set up an IP@ compatible with the class to the UPF N6 interface. We need to edit the free5gc-upf helm chart value (./free5gc/charts/free5gc-upf/values.yaml line 79 ) for the corresponding value:
     ```
      n6if:  # DN
-				    ipAddress: 172.18.0.22
+	ipAddress: 172.18.0.22
     ```
 * Creation of a persistent volume
   * create a file named volume.yaml
