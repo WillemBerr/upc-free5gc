@@ -149,7 +149,7 @@ https://kind.sigs.k8s.io/docs/user/quick-start#installation
   * We also need to set up an IP@ compatible with the class to the UPF N6 interface. We need to edit the free5gc-upf helm chart value (./free5gc/charts/free5gc-upf/values.yaml line 79 ) for the corresponding value:
     ```
      n6if:  # DN
-	ipAddress: 172.18.0.22
+       ipAddress: 172.18.0.22
     ```
 * Creation of a persistent volume
   * create a file named volume.yaml
