@@ -142,8 +142,8 @@ https://kind.sigs.k8s.io/docs/user/quick-start#installation
         masterIf: eth0
         subnetIP: 172.18.0.0
         cidr: 16
-	gatewayIP: 172.18.0.0
-	excludeIP: 172.18.0.0
+        gatewayIP: 172.18.0.0
+        excludeIP: 172.18.0.0
     ```
     
   * We also need to set up an IP@ compatible with the class to the UPF N6 interface. We need to edit the free5gc-upf helm chart value (./free5gc/charts/free5gc-upf/values.yaml line 79 ) for the corresponding value:
